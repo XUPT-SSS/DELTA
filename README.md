@@ -10,3 +10,6 @@ To evaluate tthe effectiveness of Clever, we use the Juliet Test Suite dataset, 
 2. **Decompilation**: Decompilation is the process of converting binary code into assembly code segments. We use IDA Pro v7.5, a reverse engineering tool, to decompile the .o files generated during compilation and convert them into assembly language, allowing us to extract key information such as program instructions and function names.
 
 3. **Construction of the Vulnerability Detection Dataset**: Based on the standardized function names, functions representing pre-repair vulnerabilities labeled as "1" (vulnerable), while post-repair functions are labeled as "0" (non-vulnerable). To enhance the comprehensiveness of the dataset, binary code samples compiled under eight distinct optimization options (O1, O2, Od, Og, Oi, Os, Ot, Ox) are collected. After careful selection and organization, a final binary code vulnerability dataset is constructed, containing a total of 504,610 function samples.
+# Source Code
+## Step1: Assembly Instruction Normalization
+
