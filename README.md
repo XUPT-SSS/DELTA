@@ -12,4 +12,14 @@ To evaluate tthe effectiveness of Clever, we use the Juliet Test Suite dataset, 
 3. **Construction of the Vulnerability Detection Dataset**: Based on the standardized function names, functions representing pre-repair vulnerabilities labeled as "1" (vulnerable), while post-repair functions are labeled as "0" (non-vulnerable). To enhance the comprehensiveness of the dataset, binary code samples compiled under eight distinct optimization options (O1, O2, Od, Og, Oi, Os, Ot, Ox) are collected. After careful selection and organization, a final binary code vulnerability dataset is constructed, containing a total of 504,610 function samples.
 # Source Code
 ## Step1: Assembly Instruction Normalization
-
+```
+python ./normalization.py
+```
+## Step2: Contrastive Learning Fine-tuning
+```
+python ./pretraining.py --[parameter]...
+```
+## Step3: Train and Evaluate our model
+```
+python ./classifier.py --[parameter]...
+```
